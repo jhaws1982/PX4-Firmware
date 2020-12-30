@@ -73,14 +73,14 @@ function(px4_add_common_flags)
 		-Warray-bounds
 		-Wcast-align
 		-Wdisabled-optimization
-		-Wdouble-promotion
+		-Wno-double-promotion
 		-Wfatal-errors
-		-Wfloat-equal
+		-Wno-float-equal
 		-Wformat-security
 		-Winit-self
 		-Wlogical-op
 		-Wpointer-arith
-		-Wshadow
+		-Wno-shadow
 		-Wuninitialized
 		-Wunknown-pragmas
 		-Wunused-variable
@@ -156,8 +156,8 @@ function(px4_add_common_flags)
 	# CXX only flags
 	set(cxx_flags)
 	list(APPEND cxx_flags
-		-fno-exceptions
-		-fno-rtti
+		#-fno-exceptions
+		#-fno-rtti
 		-fno-threadsafe-statics
 
 		-Wreorder
